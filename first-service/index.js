@@ -1,4 +1,4 @@
-import {client, topics} from "./mqtt.connect.mjs";
+import {client, topics} from "./mqtt.connect.js";
 
 const sendMessage = (topic, message) => {
     client.publish(topic, JSON.stringify({num: message}))
