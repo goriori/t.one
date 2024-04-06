@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  first-service:
+    build: first-service/
+    command: npm start
+    network_mode: host
+  second-service:
+    build: second-service/
+    command: npm start
+    network_mode: host
+    depends_on:
+      - first-service
